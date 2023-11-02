@@ -1,0 +1,43 @@
+<div class="art p-5 bg-light">
+    <img src="https://www.artic.edu/iiif/2/{{art.image_id}}/full/843,/0/default.jpg"
+    class="card-img-top" alt="Image not found"
+    />
+    <div class="content">
+        <h3>{{art.title}}</h3>
+        <p>{{art.date_start}}</p>
+        <p class="artist_disp"></p>
+        <p class="desc"></p>
+    </div>
+    <div class="details">
+        <div class="table table-bordered">
+            <tr>
+                <td >Artist</td>
+                <td class="value">{{art.artist_title}}</td>
+            </tr>
+            <tr>
+                <td>Title</td>
+                <td class="value">{{art.title}}</td>
+            </tr>
+            <tr>
+                <td>Place</td>
+                <td class="value">{{art.place_of_origin}}</td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td class="value">{{art.date_start}}</td>
+            </tr>
+            <tr>
+                <td>Medium</td>
+                <td class="value">{{art.medium_display}}</td>
+            </tr>
+            <tr>
+                <td>Dimensions</td>
+                <td class="value">{{art.dimensions}}</td>
+            </tr>
+            <tr>
+                <td>Credit</td>
+                <td class="value">{{art.credit_line}}</td>
+            </tr>
+        </div>
+    </div>
+</div>

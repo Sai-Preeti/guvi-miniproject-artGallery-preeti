@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%;
+ }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: rgb(26, 26, 26);
+    }
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+.black-paginator .mat-paginator-range-label,
+.black-paginator .mat-select-arrow-wrapper,
+.black-paginator .mat-paginator-navigation-material button,
+.black-paginator .mat-option {
+  color: #fff !important;
+}
+
+.black-paginator .mat-paginator-page ::ng-deep .mat-button-focus-overlay {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.black-paginator .mat-paginator-initial-page,
+.black-paginator .mat-paginator-page.mat-paginator-active {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.black-paginator .mat-form-field-underline::after {
+  background-color: #fff !important;
+}
+
+.black-paginator .mat-select-arrow {
+  color: #fff !important;
+}
+
+.black-paginator .mat-option.mat-active {
+  background-color: rgba(249, 168, 37, 0.2) !important;
+}
+
+.black-paginator .mat-option:hover:not(.mat-active) {
+  background-color: rgba(249, 168, 37, 0.04) !important;
+}
+
+.black-paginator .mat-option {
+  color: rgba(255, 255, 255, 0.8) !important;
+}

@@ -1,0 +1,164 @@
+
+.card{
+    min-height:20% ;
+    width: 16rem;
+    transition: transform 0.2s ease-in-out;
+    
+  }
+  
+  .card:hover {
+    transform: scale(1.2);
+    cursor: url('/src/assets/images/dot.cur/32');
+  }
+  .card-img-top {
+      height: 200px;
+      object-position: top;
+      object-fit: cover;
+    }
+    
+    .card-title,.card-text{
+      max-height: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .card-title {
+      font-size: 1.1rem;
+    }
+    
+    .card-text {
+      font-size: 0.9rem;
+    }
+  
+    
+    /* Text color */
+    
+    .card-body {
+        /* background-color: #e0fcf9; */
+        background-color: #cecece;
+      color: #333;
+    }
+  
+
+    .fa-heart {
+        font-size: 1.2rem;
+      color: #d83f31;
+    }
+  
+    .fa-heart:hover{
+        transform: scale(1.5);
+    }
+   
+    .navbar {
+      padding: 15px; /* Increase the padding to make the navbar taller */
+    }
+    
+    .navbar-nav .nav-link {
+      font-size: 18px; /* Increase the font size of the nav links */
+    }
+    .nav-item a:active {
+      color:#337ccf ; /* Change this to the color you want for active state */
+    }
+  
+    
+    .active-link {
+        font-size: 18px;
+        color:#337ccf ;
+        font-weight: bold;
+      }
+    .nav-item .nav-link:active {
+      border-bottom: 2px solid #337ccf; /* Change this to the color you want for the border */
+    }
+    @media (max-width: 768px) {
+      .navbar-nav {
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 15px;
+      }
+    
+      .navbar-nav .nav-link {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    
+      .navbar-collapse {
+        display: block !important;
+        padding-top: 1rem;
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      }
+    }
+  
+    .image-container {
+      position: relative; /* make the container a positioning context for its contents */
+     
+    }
+
+    
+    .image-container i {
+      position: absolute;
+      top: 10%; 
+      left: 90%; 
+      transform: translate(-50%, -50%); 
+      opacity: 0; 
+      transition: opacity 0.5s ease;
+    }
+    .image-container:hover img {
+      opacity: 0.7; 
+    }
+    .image-container:hover i {
+      opacity: 1; 
+    }
+
+    .search-div {
+      /* display: inline-block; */
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      margin-left: 3.3rem;
+      width: 20rem;
+      position: relative;
+    }
+    
+   
+    .fa-solid.fa-magnifying-glass {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      color: #555; /* adjust the color to match your design */
+      font-size: 16px; /* adjust the font size to match your design */
+    }
+  
+  
+ ::ng-deep .mat-mdc-paginator-container{
+  background-color: #424242;
+  color: #d3d3d3;
+ }
+ ::ng-deep .mat-mdc-select-min-line.ng-tns-c3393473648-1.ng-star-inserted{
+    color: #d3d3d3;
+ }
+ ::ng-deep .mat-mdc-select-min-line.ng-tns-c3393473648-3.ng-star-inserted{
+    color: #d3d3d3;
+ }
+
+ @media (min-width:767px)
+ {
+    form{
+    margin-left: 17.5%;
+    }
+    .search-div {
+      /* display: inline-block; */
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      width: 62.5rem;
+      margin-left: 3.3rem;
+      position: relative;
+    }
+ }
+
+ @media (max-width:767px)
+ {
+    form{
+    margin-left: -5%;
+    }
+ }

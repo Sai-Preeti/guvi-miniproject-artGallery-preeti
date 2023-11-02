@@ -1,0 +1,89 @@
+<div class="body">
+
+  <!-- <ng-container *ngIf="(asyncTabs | async) === null">
+    Loading tabs...
+  </ng-container>
+  
+  <mat-tab-group>
+    <mat-tab *ngFor="let tab of asyncTabs | async">
+      <ng-template mat-tab-label>{{tab.label}}</ng-template>
+      {{tab.content}}
+    </mat-tab>
+  </mat-tab-group> -->
+
+    <div class="container overflow-x-auto">
+      <nav class="navbar navbar-expand-md navbar-2xl">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+  
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Navbar brand -->
+            <a class="navbar-brand mt-lg-0" routerLink="/" style="margin-left: 3%;">
+              <i class="fa-brands fa-xl fa-artstation mt-3" style="color: #5be4ff;"></i>
+            </a>
+            <!-- Left links -->
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center w-100">
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/gallery" routerLinkActive="active">Gallery</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+                </li>
+                <li class="nav-item">
+                  <div class="favourites-link-container">
+                    <a class="nav-link" routerLinkActive="active" routerLink="/favourites">
+                      Favourites
+                    </a>
+                    <div *ngIf="service.favourites.length!=0" class="favourites-count-container text-dark">
+                      {{service.favourites.length}}
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/document" routerLinkActive="active">Documentation</a>
+                </li>
+
+                <li class="nav-item" *ngIf="userService.loggedUser==''">
+                  <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+                </li>
+                <li class="nav-item" *ngIf="userService.loggedUser!=''">
+                  <a class="nav-link user" href="/gallery" routerLinkActive="active" (click)="userService.loggedUser='';">Logout</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="">Projects</a>
+                </li> -->
+              </ul>
+            <!-- Left links -->
+          </div>
+          <!-- Collapsible wrapper -->
+  
+          <!-- Right elements -->
+          <!-- <div class="d-flex align-items-center"> -->
+            <!-- Icon -->
+            
+            
+          <!-- </div> -->
+          <!-- Right elements -->
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+    </div>
+     
+     <!-- <app-carousel></app-carousel> -->
+     <router-outlet></router-outlet>
+  <!-- <app-artworks></app-artworks>  -->
+</div>
+

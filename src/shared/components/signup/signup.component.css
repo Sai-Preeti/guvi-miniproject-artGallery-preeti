@@ -1,0 +1,23 @@
+.btn{
+    background-color: #5be4ff;
+}
+@media (min-width:768px) {
+    .login-container{
+        margin-left: 35%;
+        width:25%;
+    }
+}
+
+@media (max-width:767px) {
+    .login-container{
+        margin-left: 10%;
+        width:80%;
+    }
+}
+
+@media (max-width:378px) {
+    .login-container{
+        margin-left: 8%;
+        width:85%;
+    }
+}

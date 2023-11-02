@@ -1,0 +1,13 @@
+<div class="login-container bg-light p-5">
+    <form 
+     [formGroup]="loginData"
+    >
+        <h1 class="text-center mb-5">Login</h1>
+        <label for="">Email</label>
+        <input type="email" class="form-control mt-2" formControlName="email">
+        <label for="" class="mt-4">Password</label>
+        <input type="password" class="form-control" formControlName="password">
+        <button class="btn mt-4" (click)="validateUser()">Login</button>
+        <p class="mt-3">Don't have an account? <a routerLink="/signup">Sign up</a></p>
+    </form>
+</div>

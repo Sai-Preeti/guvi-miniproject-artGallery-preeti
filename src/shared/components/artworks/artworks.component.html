@@ -1,0 +1,59 @@
+
+<form [formGroup]="searchFrom">
+  <div class="search-div" >
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" formControlName="search" class="form-control ps-5" style="background-color: #cecece;">
+  </div>
+</form>
+<div class="container" >
+    <div class="row" style="margin-left: 11%;margin-right: 3%;">
+      <div *ngFor="let art of arts" class="col-lg-4 col-sm-12 col-md-6">
+        <div class="card mt-4 mb-5">
+          <div class="image-container">
+            <img onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578926375605-eaf7559b1458?auto=format&fit=crop&q=80&w=1963&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'"
+            src="https://www.artic.edu/iiif/2/{{art.image_id}}/full/843,/0/default.jpg" class="card-img-top" alt="Image not found">
+            <i class="fa-solid fa-2xl fa-eye" (click)="viewArt(art)"></i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{art.title}}</h5>
+            <div class="d-flex justify-content-between align-items-center">
+                <p *ngIf="art.artist_title!=null" class="card-text">{{art.artist_title}}</p>
+                <p *ngIf="art.artist_title==null" class="card-text">Pablo Picasso</p>
+                <i *ngIf="service.checkInFav(art.id)==false" class="fa-regular fa-heart" mat-stroked-button (click)="addToFav(art)"></i>
+                <i *ngIf="service.checkInFav(art.id)==true" class="fa-solid fa-heart" mat-stroked-button (click)="addToFav(art)"></i>
+            </div>
+            <button class="btn btn-outline-primary" (click)="openDialog(art.id)">
+              <i class="fa-solid fa-share-nodes"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> 
+</div>
+  <!-- <mat-paginator #paginator
+                class="black-paginator"
+                (page)="handlePageEvent($event)"
+                [length]="length"
+                [pageSize]="pageSize"
+                [disabled]="disabled"
+                [showFirstLastButtons]="showFirstLastButtons"
+                [pageSizeOptions]="showPageSizeOptions ? pageSizeOptions : []"
+                [hidePageSize]="hidePageSize"
+                [pageIndex]="pageIndex"
+                aria-label="Select page"
+                >
+  </mat-paginator>  -->
+  <mat-paginator #paginator
+  class="black-paginator"
+  (page)="handlePageEvent($event)"
+  [length]="length"
+  [pageSize]="pageSize"
+  [disabled]="disabled"
+  [showFirstLastButtons]="showFirstLastButtons"
+  [pageSizeOptions]="showPageSizeOptions ? pageSizeOptions : []"
+  [hidePageSize]="hidePageSize"
+  [pageIndex]="pageIndex"
+  aria-label="Select page"
+  >
+</mat-paginator>
+  

@@ -1,0 +1,134 @@
+
+.card-title {
+    position: absolute;
+    bottom: 5px;
+    left: 35%;
+    color: rgb(34, 32, 32);
+    overflow: hidden;
+    font-size: 30px;
+    max-width: 30%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    z-index: 10; /* make sure the text is on top of the image */
+  }
+
+  h5.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 15px;
+    width: 25%;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    color: #5be4ff;
+    padding: 1rem;
+    text-shadow: 1px 1px 1px #333;
+    /* position: absolute; */
+    /* bottom: 0;
+    left: 0;
+    width: 30%;
+    */
+    box-sizing: border-box;
+  }
+.container{
+    text-align: center;
+    position: relative;
+}
+.image-container {
+  position: relative; /* make the container a positioning context for its contents */
+ 
+}
+
+
+.image-container:hover img {
+  opacity: 0.7; 
+}
+
+
+@media (max-width: 768px) {
+  img{
+    display:inline-block;
+    max-height:18rem; 
+    min-width:20rem; 
+    max-width:20rem; 
+    margin-left: 3%;
+    vertical-align:middle;
+    opacity: 0.6;
+}
+.left{
+  position:absolute;
+  top:50%;
+  left:0;
+}
+
+.right{
+  position:absolute;
+  top:50%;
+  right:-5%;
+}
+.fas {
+  font-size: 25px;
+  color:black;
+}
+
+.dots{
+  margin-left: 10%;
+  display: inline;
+}
+.dot{
+  font-size: 10px;
+  margin-top: 1rem;
+}
+.overlay p {
+  color: #5be4ff;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-left: 8%;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+}
+@media (min-width:767px)
+{
+    img{
+        display:inline-block;
+        max-height:35rem; 
+        min-width:62rem; 
+        vertical-align:middle;
+        opacity: 0.6;
+    }
+
+    .left{
+        position:absolute;
+        top:50%;
+        left:8%;
+    }
+
+    .right{
+        position:absolute;
+        top:50%;
+        right:8%;
+    }
+    .fas {
+      font-size: 25px;
+      color:black;
+    }
+  
+  .dots{
+      display: inline;
+      padding: 0.5rem;
+  }
+  .dot{
+      font-size: 15px;
+      margin-top: 1rem;
+  }
+  .overlay p {
+    color: #5be4ff;
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+    margin-left: 30%;margin-right: 30%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+}
+
+
+
+ 

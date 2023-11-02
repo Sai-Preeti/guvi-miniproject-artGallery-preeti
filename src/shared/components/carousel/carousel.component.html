@@ -1,0 +1,25 @@
+<div class="overlay mt-5">
+  <p class="text-center">Welcome to the Art Gallery of Chicago! </p>
+  <p  class="text-center">Our gallery features a diverse range of artwork from different time periods and cultures, and we hope that
+    you'll find something that inspires and moves you.</p>    
+</div>
+
+<div class="container">
+    <div style="position:relative;">
+      <div class="image-container">
+        <img (click)="viewArt(arts[no])" src="https://www.artic.edu/iiif/2/{{arts[no].image_id}}/full/843,/0/default.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578926375605-eaf7559b1458?auto=format&fit=crop&q=80&w=1963&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'">
+        <h5 class="card-title text-center w-100" >{{arts[no].title}}</h5>
+      </div>
+      <div class="left"  (click)="prevImage()" >
+        <i class="fas fa-solid fa-chevron-left" style="color:#5be4ff"></i>
+      </div>
+      <div class="right" (click)="nextImage()">
+        <i class="fas fa-solid fa-chevron-right" style="color:#5be4ff"></i>
+      </div>
+      
+    </div>
+    <div *ngFor="let x of numbers;index as i" class="dots">
+          <span *ngIf="i==no" (click)="getImage(i)"><i class="fa-solid fa-circle dot" style="color:#5be4ff"></i></span>
+          <span *ngIf="i!=no" (click)="getImage(i)"><i class="fa-regular fa-circle dot" style="color:#cdf5fd;"></i></span>
+    </div>
+</div>

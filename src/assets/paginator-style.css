@@ -1,0 +1,14 @@
+::ng-deep .black-paginator .mat-paginator {
+    background-color: black;
+  }
+  ::ng-deep .black-paginator .mat-paginator-range-label {
+    color: white;
+  }
+  ::ng-deep .black-paginator .mat-paginator-navigation-previous i,
+  ::ng-deep .black-paginator .mat-paginator-navigation-next i {
+    color: white;
+  }
+  ::ng-deep .black-paginator .mat-select-arrow,
+  ::ng-deep .black-paginator .mat-option-text {
+    color: white;
+  }

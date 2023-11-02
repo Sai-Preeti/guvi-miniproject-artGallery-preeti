@@ -1,0 +1,68 @@
+.card{
+  min-height:300px ;
+  width: 16rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  cursor: url('/src/assets/images/dot.cur/32');
+}
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+    object-position: top;
+  }
+  
+  .card-title,.card-text{
+    max-height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  
+  /* Text color */
+  
+  .card-body {
+      background-color: #e0fcf9;
+    color: #333;
+  }
+
+
+  .fa-heart {
+    font-size: 1.2rem;
+    color: #d83f31;
+  }
+
+  .fa-heart:hover{
+      transform: scale(1.5);
+  }
+ 
+ 
+  .image-container {
+    position: relative; /* make the container a positioning context for its contents */  
+  }
+    
+  .image-container i {
+    position: absolute;
+    top: 10%; 
+    left: 90%; 
+    transform: translate(-50%, -50%); 
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+  }
+  .image-container:hover img {
+    opacity: 0.7; 
+  }
+  .image-container:hover i {
+    opacity: 1; 
+  }
+
